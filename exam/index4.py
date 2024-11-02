@@ -7,6 +7,7 @@ def ანბანის_ომი(fight):
     for char in fight:
         if char in left_side:
             left_score +=
+            ვერ გავაკეთ :(
 
 
 
