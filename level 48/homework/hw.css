@@ -1,0 +1,131 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shape {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Square */
+  .square {
+    background-color: #ff6f91;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Circle */
+  .circle {
+    background-color: #ff914d;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Rectangle */
+  .rectangle {
+    background-color: #5eb8ff;
+    width: 150px;
+    height: 70px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Triangle */
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #66de93;
+  }
+  
+  /* Pentagon */
+  .pentagon {
+    position: relative;
+    background-color: #a9d18e;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Oval */
+  .oval {
+    background-color: #ffa69e;
+    border-radius: 50%;
+    width: 150px;
+    height: 80px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Star */
+  .star {
+    position: relative;
+    display: inline-block;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    background-color: #c4c4c4;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Crescent Moon */
+  .crescent {
+    position: relative;
+    background-color: #fbd46d;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  .crescent::before {
+    content: "";
+    position: absolute;
+    background-color: #f0f0f0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 10px;
+    left: 20px;
+  }
+  
+  /* Heart */
+  .heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background-color: #ff6b6b;
+    transform: rotate(-45deg);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    top: 0;
+  }
+  .heart::before {
+    left: 50px;
+  }
+  .heart::after {
+    left: -50px;
+  }
+  
