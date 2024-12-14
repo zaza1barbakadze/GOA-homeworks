@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>რეგისტრაციის ფორმა</title>
+</head>
+<body>
+    <h1>მომხმარებლის რეგისტრაციის ფორმა</h1>
+    <form id="registrationForm">
+        <label for="firstName">სახელი:</label><br>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        
+        <label for="lastName">გვარი:</label><br>
+        <input type="text" id="lastName" name="lastName"><br><br>
+        
+        <label for="email">ელფოსტა:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="password">პაროლი:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        
+        <label>
+            <input type="checkbox" id="terms" name="terms">
+            ვეთანხმები წესებს და პირობებს
+        </label><br><br>
+        
+        <button type="button" onclick="registerUser()">რეგისტრაცია</button>
+    </form>
+    
+    <script>
+        function registerUser() {
+            // ველების შევსება
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const terms = document.getElementById('terms').checked;
+            
+            // ველების შემოწმება
+            if (!firstName || !lastName || !email || !password || !terms) {
+                alert("გთხოვთ, შეავსოთ ყველა ველი.");
+                return;
+            }
+            
+            // ვალიდური მონაცემების კონსოლში გამოყვანა
+            console.log("სახელი:", firstName);
+            console.log("გვარი:", lastName);
+            console.log("ელფოსტა:", email);
+            console.log("პაროლი:", password);
+            console.log("ვეთანხმები წესებს და პირობებს:", terms);
+            
+            alert("რეგისტრაცია წარმატებით დასრულდა!");
+        }
+    </script>
+</body>
+</html>
