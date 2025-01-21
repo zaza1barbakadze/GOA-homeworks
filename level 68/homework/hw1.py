@@ -1,10 +1,8 @@
 def increment_to_zeros(number):
     while True:
-        # შეამოწმეთ, რომ ყველა ციფრი პირველის შემდეგ იყოს 0
         number_str = str(number)
         if all(digit == '0' for digit in number_str[1:]):
             return number
-        # თუ არა, გაზარდეთ რიცხვი 1-ით
         number += 1
 
 def main():
@@ -19,5 +17,4 @@ def main():
     except ValueError:
         print("გთხოვთ შეიყვანოთ ვალიდური რიცხვი.")
 
-# პროგრამის გაშვება
 main()
