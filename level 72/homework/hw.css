@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0eff4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.header {
+    padding: 20px;
+    font-size: 18px;
+    color: #0288d1;
+}
+
+.guarantee {
+    color: #fbc02d;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    background: #26a69a;
+    color: white;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.signup-button {
+    background: #ffeb3b;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signup-button:hover {
+    background: #fdd835;
+}
