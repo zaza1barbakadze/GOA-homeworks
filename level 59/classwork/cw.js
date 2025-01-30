@@ -1,0 +1,11 @@
+console.log(10 > 5)
+console.log(20 === 20)
+console.log(7 >= 7)
+console.log("apple" !== "orange")
+console.log(50 < 100)
+
+console.log(3 > 10)
+console.log(15 !== 15)
+console.log(8 < 2)
+console.log("cat" === "dog")
+console.log(30 <= 20)
