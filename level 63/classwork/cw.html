@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ქუქი ქლიქერი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .cookie-container {
+            text-align: center;
+        }
+        .cookie-icon {
+            width: 100px;
+            cursor: pointer;
+        }
+        .score {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cookie-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Chocolate_chip_cookie_icon.svg" alt="Cookie" class="cookie-icon" id="cookie">
+        <div class="score" id="score">ქულა: 0</div>
+    </div>
+
+    <script>
+        let score = 0;
+
+        const cookie = document.getElementById('cookie');
+        const scoreElement = document.getElementById('score');
+
+        cookie.addEventListener('click', () => {
+            score++;
+            if (score % 100 === 0) {
+                score *= 2;
+            }
+            scoreElement.textContent = `ქულა: ${score}`;
+        });
+    </script>
+</body>
+</html>
