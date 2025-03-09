@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #display {
+            font-size: 2em;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <input type="number" id="timeInput" placeholder="Enter time (0-10000)" min="0" max="10000">
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <div id="display"></div>
+
+    <script>
+        let timer;
+        let count = 0;
+        let maxTime;
+
+        function startTimer() {
+            stopTimer();
+            count = 0;
+            maxTime = parseInt(document.getElementById('timeInput').value);
+            let display = document.getElementById('display');
+            
+            if (isNaN(maxTime) || maxTime < 0 || maxTime > 10000) {
+                display.innerText = "Please enter a valid number between 0 and 10000";
+                return;
+            }
+            
+            display.innerText = "";
+            timer = setInterval(() => {
+                count++;
+                if (count > maxTime) {
+                    clearInterval(timer);
+                    display.innerText = "Time's up";
+                } else {
+                    display.innerText = count;
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+        }
+    </script>
+</body>
+</html>
