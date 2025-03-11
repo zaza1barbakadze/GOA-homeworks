@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById მაგალითი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 10px auto;
+            line-height: 100px;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Box 1</div>
+    <div id="box2" class="box">Box 2</div>
+    <button onclick="changeText()">ტექსტის შეცვლა</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("box1").innerText = "გამარჯობა!";
+            document.getElementById("box2").style.backgroundColor = "lightblue";
+        }
+    </script>
+</body>
+</html>
