@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Divs</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+        <div id="div4">4</div>
+        <div id="div5">5</div>
+        <div id="div6">6</div>
+        <div id="div7">7</div>
+        <div id="div8">8</div>
+        <div id="div9">9</div>
+        <div id="div10">10</div>
+    </div>
+    
+    <script>
+        const colors = ["red", "blue", "green", "purple", "orange", "pink", "brown", "yellow", "gray", "teal"];
+        for (let i = 1; i <= 10; i++) {
+            let div = document.getElementById(`div${i}`);
+            div.style.backgroundColor = colors[i - 1];
+            div.style.borderRadius = "10px";
+            div.style.boxShadow = "2px 2px 5px rgba(0, 0, 0, 0.2)";
+            div.style.textAlign = "center";
+        }
+    </script>
+</body>
+</html>
